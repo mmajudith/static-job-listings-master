@@ -32,31 +32,37 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            #fill{
-                display: flex;
-                flex-direction: row;  
-            }
-            .text{
-                padding: 7px;
-                background-color: lighten($DesaturatedDarkCyan,40);
-                border-bottom-left-radius: 5px;
-                border-top-left-radius: 5px;
-                box-shadow:0 0px 0px rgba(0,0,0,.2);
-                color: $DesaturatedDarkCyan;
-            }
-            .remove{
-                background-color: $DesaturatedDarkCyan;
-                margin-right: 10px;
-                border-bottom-right-radius: 5px;
-                border-top-right-radius: 5px;
-                padding: 7px;
-                cursor: pointer;
-                &:hover{
-                    background-color: $VeryDarkGrayishCyan;
+            .fill{
+                width: 95%;
+                .con{
+                    float: left;
+                    display: flex;
+                    flex-direction: row;
+                    margin-left: 7px;
+                    margin-bottom: 5px;
+                }
+                .text{
+                    padding: 7px;
+                    background-color: lighten($DesaturatedDarkCyan,40);
+                    border-bottom-left-radius: 5px;
+                    border-top-left-radius: 5px;
+                    box-shadow:0 0px 0px rgba(0,0,0,.2);
+                    color: $DesaturatedDarkCyan;
+                }
+                .remove{
+                    background-color: $DesaturatedDarkCyan;
+                    border-bottom-right-radius: 5px;
+                    border-top-right-radius: 5px;
+                    padding: 7px;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $VeryDarkGrayishCyan;
+                    }
                 }
             }
             .clear{
                 color:  $DesaturatedDarkCyan;
+                width: 10%;
                 &:hover{
                     text-decoration: underline;
                     cursor: pointer;
@@ -64,8 +70,39 @@
             }    
         }
     } 
+    @include mq(1285px){
+        .filter{
+            width: 89%;
+            margin: auto;
+        }
+    }
+    @include mq(1100px){
+        .filter{
+            width: 88%;
+            margin: auto;
+            left: 65px;
+        }
+    }
+    @include mq(920px){
+        .filter{
+            width: 85%;
+            margin: auto;
+        }
+    }
+    @include mq(625px){
+        .filter{
+            width: 80%;
+            margin: auto;
+            left: 60px;
+        }
+    }
     @include mq(400px){
         background-image: url(../images/bg-header-mobile.svg);
+        .filter{
+            width: 90%;
+            margin: auto;
+            left: 20px;
+        }
     }  
 }
 
@@ -141,6 +178,7 @@ p{
         }
     }
     @include mq(650px){
+        margin-top: 130px;
         display: flex;
         flex-direction: column;
         .img{
@@ -158,6 +196,7 @@ p{
         }
     }
     @include mq(400px){
+        margin-top: 150px;
         position: relative;
         .img{
             position: absolute;
@@ -929,3 +968,7 @@ p{
 
 .attribution { font-size: 13px; text-align: center; padding: 30px;}
 .attribution a { color:$DesaturatedDarkCyan ; text-decoration: none;}
+
+.c{
+    display: none;
+}

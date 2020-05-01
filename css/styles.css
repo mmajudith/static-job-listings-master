@@ -53,11 +53,17 @@ li {
   flex-direction: row;
   justify-content: space-between;
 }
-.header .filter .filtered-text #fill {
+.header .filter .filtered-text .fill {
+  width: 95%;
+}
+.header .filter .filtered-text .fill .con {
+  float: left;
   display: flex;
   flex-direction: row;
+  margin-left: 7px;
+  margin-bottom: 5px;
 }
-.header .filter .filtered-text .text {
+.header .filter .filtered-text .fill .text {
   padding: 7px;
   background-color: #deeded;
   border-bottom-left-radius: 5px;
@@ -65,27 +71,58 @@ li {
   box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
   color: #5ba4a4;
 }
-.header .filter .filtered-text .remove {
+.header .filter .filtered-text .fill .remove {
   background-color: #5ba4a4;
-  margin-right: 10px;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   padding: 7px;
   cursor: pointer;
 }
-.header .filter .filtered-text .remove:hover {
+.header .filter .filtered-text .fill .remove:hover {
   background-color: #2c3a3a;
 }
 .header .filter .filtered-text .clear {
   color: #5ba4a4;
+  width: 10%;
 }
 .header .filter .filtered-text .clear:hover {
   text-decoration: underline;
   cursor: pointer;
 }
+@media screen and (max-width: 1285px) {
+  .header .filter {
+    width: 89%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .header .filter {
+    width: 88%;
+    margin: auto;
+    left: 65px;
+  }
+}
+@media screen and (max-width: 920px) {
+  .header .filter {
+    width: 85%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 625px) {
+  .header .filter {
+    width: 80%;
+    margin: auto;
+    left: 60px;
+  }
+}
 @media screen and (max-width: 400px) {
   .header {
     background-image: url(../images/bg-header-mobile.svg);
+  }
+  .header .filter {
+    width: 90%;
+    margin: auto;
+    left: 20px;
   }
 }
 
@@ -214,6 +251,7 @@ p:hover {
 }
 @media screen and (max-width: 650px) {
   .photosnap-wraper {
+    margin-top: 130px;
     display: flex;
     flex-direction: column;
   }
@@ -233,6 +271,7 @@ p:hover {
 }
 @media screen and (max-width: 400px) {
   .photosnap-wraper {
+    margin-top: 150px;
     position: relative;
   }
   .photosnap-wraper .img {
@@ -1199,4 +1238,8 @@ p:hover {
 .attribution a {
   color: #5ba4a4;
   text-decoration: none;
+}
+
+.c {
+  display: none;
 }
