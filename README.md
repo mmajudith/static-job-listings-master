@@ -1,3 +1,14 @@
-# Frontend Mentor - Job Listings Challenge
+# Job Listings 
 
-Challenge from Frontend Mentor coded by me, using HTML, CSS, SASS, JAVACRIPT.
+## Live URL:
+
+   https://mmajudith.github.io/static-job-listings-master/
+
+Website that lists companies that needed developers
+
+Technologies Used:
+
+- HTML
+- CSS
+- SASS
+- Javascript
